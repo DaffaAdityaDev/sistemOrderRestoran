@@ -9,23 +9,23 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
     <title>Restoran</title>
-    <!-- Bootstrap core CSS -->
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animsition.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    
     <link href="css/style.css" rel="stylesheet"> </head>
 
 <body>
-           <!--header starts-->
+           
         <header id="header" class="header-scroll top-header headrom">
-            <!-- .navbar -->
+           
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
@@ -55,10 +55,10 @@ session_start();
                     </div>
                 </div>
             </nav>
-            <!-- /.navbar -->
+        
         </header>
         <div class="page-wrapper">
-            <!-- top Links -->
+          
             <div class="top-links">
                 <div class="container">
                     <ul class="row links">
@@ -69,11 +69,10 @@ session_start();
                     </ul>
                 </div>
             </div>
-            <!-- end:Top links -->
-            <!-- start: Inner page hero -->
+            
             <div class="inner-page-hero bg-image" data-image-src="images/img/res.jpg">
                 <div class="container"> </div>
-                <!-- end:Container -->
+             
             </div>
             <div class="result-show">
                 <div class="container">
@@ -83,7 +82,7 @@ session_start();
                     </div>
                 </div>
             </div>
-            <!-- //results show -->
+            
             <section class="restaurants-page">
                 <div class="container">
                     <div class="row">
@@ -91,7 +90,7 @@ session_start();
                           
                           
                             <div class="widget clearfix">
-                                <!-- /widget heading -->
+                            
                                 <div class="widget-heading">
                                     <h3 class="widget-title text-dark">
                                 Popular
@@ -121,7 +120,7 @@ session_start();
                                     </ul>
                                 </div>
                             </div>
-                            <!-- end:Widget -->
+                      
                         </div>
                         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-9">
                             <div class="bg-gray restaurant-entry">
@@ -160,7 +159,7 @@ session_start();
 						?>
                                     
                                 </div>
-                                <!--end:row -->
+                               
                             </div>
                          
                             
@@ -174,10 +173,10 @@ session_start();
                 </div>
             </section>
            
-            <!-- start: FOOTER -->
+     
         <footer class="footer">
             <div class="container">
-                <!-- top footer statrs -->
+  
                 <div class="row top-footer">
                     <div class="col-xs-12 col-sm-3 footer-logo-block color-gray">
                         <a href="#"> <img src="images/food-picky-logo.png" alt="Footer logo"> </a> <span>Order Delivery &amp; Take-Out </span> </div>
@@ -221,8 +220,7 @@ session_start();
                         </ul>
                     </div>
                 </div>
-                <!-- top footer ends -->
-                <!-- bottom footer statrs -->
+             
                 <div class="bottom-footer">
                     <div class="row">
                         <div class="col-xs-12 col-sm-3 payment-options color-gray">
@@ -251,15 +249,13 @@ session_start();
                             <h5>Telepon: <a href="tel:+080000012222">(021) 8614077</a></h5> </div>
                     </div>
                 </div>
-                <!-- bottom footer ends -->
+               
             </div>
         </footer>
-        <!-- end:Footer -->
+    
         </div>
   
-    
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+   
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

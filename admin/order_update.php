@@ -36,16 +36,15 @@ window.print();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Favicon icon -->
+  
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <title>Update Pesanan</title>
-    <!-- Bootstrap Core CSS -->
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+ 
     <link href="css/helper.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -67,21 +66,20 @@ window.print();
 }
 .panel-body {
   background: #e5e5e5;
-  /* Old browsers */
+
   background: -moz-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
-  /* FF3.6+ */
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #e5e5e5), color-stop(100%, #ffffff));
-  /* Chrome,Safari4+ */
+  
   background: -webkit-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
-  /* Chrome10+,Safari5.1+ */
+
   background: -o-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
-  /* Opera 12+ */
+
   background: -ms-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
-  /* IE10+ */
+  
   background: radial-gradient(ellipse at center, #e5e5e5 0%, #ffffff 100%);
-  /* W3C */
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#ffffff', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+
   font: 600 15px "Open Sans", Arial, sans-serif;
 }
 label.control-label {
@@ -103,7 +101,6 @@ table {
 	margin-top:50px;
 	}
 
-/* Zebra striping */
 tr:nth-of-type(odd) { 
 	background: #eee; 
 	}

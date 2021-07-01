@@ -37,24 +37,24 @@ else{
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
     <title>Checkout</title>
-    <!-- Bootstrap core CSS -->
+    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animsition.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+   
     <link href="css/style.css" rel="stylesheet"> </head>
 <body>
     
     <div class="site-wrapper">
-        <!--header starts-->
+        
         <header id="header" class="header-scroll top-header headrom">
-            <!-- .navbar -->
+          
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
@@ -84,7 +84,7 @@ else{
                     </div>
                 </div>
             </nav>
-            <!-- /.navbar -->
+        
         </header>
         <div class="page-wrapper">
             <div class="top-links">
@@ -148,7 +148,7 @@ else{
                                             </table>
                                         </div>
                                     </div>
-                                    <!--cart summary-->
+                                   
                                     <div class="payment-option">
                                         <ul class=" list-unstyled">
                                             <li>
@@ -172,10 +172,10 @@ else{
 				 </form>
             </div>
            
-            <!-- start: FOOTER -->
+            
             <footer class="footer">
             <div class="container">
-                <!-- top footer statrs -->
+               
                 <div class="row top-footer">
                     <div class="col-xs-12 col-sm-3 footer-logo-block color-gray">
                         <a href="#"> <img src="images/food-picky-logo.png" alt="Footer logo"> </a> <span>Order Delivery &amp; Take-Out </span> </div>
@@ -219,8 +219,7 @@ else{
                         </ul>
                     </div>
                 </div>
-                <!-- top footer ends -->
-                <!-- bottom footer statrs -->
+                
                 <div class="bottom-footer">
                     <div class="row">
                         <div class="col-xs-12 col-sm-3 payment-options color-gray">
@@ -249,18 +248,15 @@ else{
                             <h5>Telepon: <a href="tel:+080000012222">(021) 8614077</a></h5> </div>
                     </div>
                 </div>
-                    <!-- top footer ends -->
-                    
-                    <!-- bottom footer ends -->
+                   
                 </div>
             </footer>
-            <!-- end:Footer -->
+          
         </div>
-        <!-- end:page wrapper -->
+       
          </div>
 
-     <!-- Bootstrap core JavaScript
-    ================================================== -->
+     
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

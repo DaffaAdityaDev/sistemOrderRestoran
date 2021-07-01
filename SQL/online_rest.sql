@@ -42,7 +42,9 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- Dumping data for table `admin`
 --
 
-
+INSERT INTO `admin` (`adm_id`, `username`, `password`, `email`, `code`, `date`) VALUES
+(6, 'admin', '81dc9bdb52d04dc20036dbd8313ed055', 'admin@gmail.com', '', '2018-04-09 07:36:18'),
+(8, 'abc888', '6d0361d5777656072438f6e314a852bc', 'abc@gmail.com', 'QX5ZMN', '2018-04-13 18:12:30');
 
 -- --------------------------------------------------------
 
@@ -60,7 +62,13 @@ CREATE TABLE IF NOT EXISTS `admin_codes` (
 -- Dumping data for table `admin_codes`
 --
 
-
+INSERT INTO `admin_codes` (`id`, `codes`) VALUES
+(1, 'QX5ZMN'),
+(2, 'QFE6ZM'),
+(3, 'QMZR92'),
+(4, 'QPGIOV'),
+(5, 'QSTE52'),
+(6, 'QMTZ2J');
 
 -- --------------------------------------------------------
 
@@ -82,6 +90,15 @@ CREATE TABLE IF NOT EXISTS `dishes` (
 -- Dumping data for table `dishes`
 --
 
+INSERT INTO `dishes` (`d_id`, `rs_id`, `title`, `slogan`, `price`, `img`) VALUES
+(11, 48, 'Bonefish', 'enak ', '55.77', '5ad7582e2ec9c.jpg'),
+(12, 48, 'Hard Rock Cafe', 'enak', '22.12', '5ad7590d9702b.jpg'),
+(13, 49, 'Uno Pizzeria & Grill', 'enak', '12.35', '5ad7597aa0479.jpg'),
+(14, 50, 'Red Robins Chick on a Stick', 'enak', '34.99', '5ad759e1546fc.jpg'),
+(15, 51, 'Lyfe Kitchens Tofu Taco', 'enak', '11.99', '5ad75a1869e93.jpg'),
+(16, 52, 'Houlihans Mini Cheeseburger', 'enak', '22.55', '5ad75a5dbb329.jpg'),
+(17, 53, 'jklmno', 'enak', '17.99', '5ad79fcf59e66.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -101,7 +118,16 @@ CREATE TABLE IF NOT EXISTS `remark` (
 -- Dumping data for table `remark`
 --
 
-
+INSERT INTO `remark` (`id`, `frm_id`, `status`, `remark`, `remarkDate`) VALUES
+(62, 32, 'in process', 'ok', '2018-04-18 17:35:52'),
+(63, 32, 'closed', 'ok', '2018-04-18 17:36:46'),
+(64, 32, 'in process', 'ok', '2018-04-18 18:01:37'),
+(65, 32, 'closed', 'ok', '2018-04-18 18:08:55'),
+(66, 34, 'in process', 'ok', '2018-04-18 18:56:32'),
+(67, 35, 'closed', 'ok', '2018-04-18 18:59:08'),
+(68, 37, 'in process', 'ok!', '2018-04-18 19:50:06'),
+(69, 37, 'rejected', 'ok', '2018-04-18 19:51:19'),
+(70, 37, 'closed', 'ok', '2018-04-18 19:51:50');
 
 -- --------------------------------------------------------
 
@@ -129,6 +155,13 @@ CREATE TABLE IF NOT EXISTS `restaurant` (
 -- Dumping data for table `restaurant`
 --
 
+INSERT INTO `restaurant` (`rs_id`, `c_id`, `title`, `email`, `phone`, `url`, `o_hr`, `c_hr`, `o_days`, `address`, `image`, `date`) VALUES
+(48, 5, 'Hari Burger', 'HariBurger@gmail.com', ' 090412 64676', 'HariBurger.com', '7am', '4pm', 'mon-tue', ' jakarta, bkt', '5ad74ce37c383.jpg', '2018-04-18 13:49:23'),
+(49, 5, 'The Great Kabab Factory', 'kwbab@gmail.com', '011 2677 9070', 'kwbab.com', '6am', '5pm', 'mon-fri', 'jakarta, bkt', '5ad74de005016.jpg', '2018-04-18 13:53:36'),
+(50, 6, 'Aarkay Vaishno Dhaba', 'Vaishno@gmail.com', '090410 35147', 'Vaishno.com', '6am', '6pm', 'mon-sat', 'bekasi, pondok', '5ad74e5310ae4.jpg', '2018-04-18 13:55:31'),
+(51, 7, 'Martini', 'martin@gmail.com', '3454345654', 'martin.com', '8am', '4pm', 'mon-thu', 'bekasi, pondok', '5ad74ebf1d103.jpg', '2018-04-18 13:57:19'),
+(52, 8, 'hudson', 'hud@gmail.com', '2345434567', 'hudson.com', '6am', '7pm', 'mon-fri', 'bekasi, pondok', '5ad756f1429e3.jpg', '2018-04-18 14:32:17'),
+(53, 9, 'kriyana store', 'kari@gmail.com', '4512545784', 'kari.com', '7am', '7pm', 'mon-sat', 'bekasi, pondok', '5ad79e7d01c5a.jpg', '2018-04-18 19:37:33');
 
 -- --------------------------------------------------------
 
@@ -147,7 +180,12 @@ CREATE TABLE IF NOT EXISTS `res_category` (
 -- Dumping data for table `res_category`
 --
 
-
+INSERT INTO `res_category` (`c_id`, `c_name`, `date`) VALUES
+(5, 'grill', '2021-04-14 18:45:28'),
+(6, 'pizza', '2021-04-14 18:44:56'),
+(7, 'pasta', '2021-04-14 18:45:13'),
+(8, 'thaifood', '2021-04-14 18:32:56'),
+(9, 'fish', '2021-04-14 18:44:33');
 
 -- --------------------------------------------------------
 
@@ -173,6 +211,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
+INSERT INTO `users` (`u_id`, `username`, `f_name`, `l_name`, `email`, `phone`, `password`, `address`, `status`, `date`) VALUES
+(31, 'navjot789', 'navjot', 'singh', 'ns949405@gmail.com', '9041240385', '6d0361d5777656072438f6e314a852bc', 'jakarta', 1, '2018-04-18 10:05:03'),
+(32, 'navjot890', 'nav', 'singh', 'nds949405@gmail.com', '6232125458', '6d0361d5777656072438f6e314a852bc', 'jakarta', 1, '2018-04-18 09:50:56');
 
 -- --------------------------------------------------------
 
@@ -194,7 +235,6 @@ CREATE TABLE IF NOT EXISTS `users_orders` (
 --
 -- Dumping data for table `users_orders`
 --
-
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -54,7 +54,7 @@ if(isset($_POST['submit1'] ))
        	$message = "Password Tidak Sama";
     }
 	
-    elseif (!filter_var($_POST['cr_email'], FILTER_VALIDATE_EMAIL)) // Validate email address
+    elseif (!filter_var($_POST['cr_email'], FILTER_VALIDATE_EMAIL)) 
     {
        	$message = "Email Tidak Sah Masukan Email Sah!";
     }
@@ -66,20 +66,20 @@ if(isset($_POST['submit1'] ))
      {
     	$message = 'Email Sudah Terdaftar!';
      }
-	 if(mysqli_num_rows($check_code) > 0)           // if code already exist 
+	 if(mysqli_num_rows($check_code) > 0)     
              {
                    $message = "Unique Code Sudah Terdaftar!";
              }
 	else{
-       $result = mysqli_query($db,"SELECT id FROM admin_codes WHERE codes =  '".$_POST['code']."'");  //query to select the id of the valid code enter by user! 
+       $result = mysqli_query($db,"SELECT id FROM admin_codes WHERE codes =  '".$_POST['code']."'");  
 					  
-                     if(mysqli_num_rows($result) == 0)     //if code is not valid
+                     if(mysqli_num_rows($result) == 0)     
 						 {
-                            // row not found, do stuff...
+                            
 			                 $message = "code Tidak Sah!";
                          } 
                       
-                      else                                 //if code is valid 
+                      else                              
 					     {
 	
 								$mql = "INSERT INTO admin (username,password,email,code) VALUES ('".$_POST['cr_user']."','".md5($_POST['cr_pass'])."','".$_POST['cr_email']."','".$_POST['code']."')";

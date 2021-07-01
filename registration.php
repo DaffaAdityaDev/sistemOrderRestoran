@@ -2,12 +2,12 @@
 <html lang="en">
 <?php
 
-session_start(); //temp session
-error_reporting(0); // hide undefine index
-include("connection/connect.php"); // connection
-if(isset($_POST['submit'] )) //if submit btn is pressed
+session_start();
+error_reporting(0);
+include("connection/connect.php");
+if(isset($_POST['submit'] )) 
 {
-     if(empty($_POST['firstname']) ||  //fetching and find if its empty
+     if(empty($_POST['firstname']) || 
    	    empty($_POST['lastname'])|| 
 		empty($_POST['email']) ||  
 		empty($_POST['phone'])||
@@ -19,39 +19,39 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 		}
 	else
 	{
-		//cheching username & email if already present
+		
 	$check_username= mysqli_query($db, "SELECT username FROM users where username = '".$_POST['username']."' ");
 	$check_email = mysqli_query($db, "SELECT email FROM users where email = '".$_POST['email']."' ");
 		
 
 	
-	if($_POST['password'] != $_POST['cpassword']){  //matching passwords
+	if($_POST['password'] != $_POST['cpassword']){  
        	$message = "Password not match";
     }
-	elseif(strlen($_POST['password']) < 6)  //cal password length
+	elseif(strlen($_POST['password']) < 6)  
 	{
 		$message = "Password Must be >=6";
 	}
-	elseif(strlen($_POST['phone']) < 10)  //cal phone length
+	elseif(strlen($_POST['phone']) < 10)  
 	{
 		$message = "invalid phone number!";
 	}
 
-    elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) // Validate email address
+    elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
     {
        	$message = "Invalid email address please type a valid email!";
     }
-	elseif(mysqli_num_rows($check_username) > 0)  //check username
+	elseif(mysqli_num_rows($check_username) > 0)  
      {
     	$message = 'username Already exists!';
      }
-	elseif(mysqli_num_rows($check_email) > 0) //check email
+	elseif(mysqli_num_rows($check_email) > 0) 
      {
     	$message = 'Email Already exists!';
      }
 	else{
        
-	 //inserting values into db
+	
 	$mql = "INSERT INTO users(username,f_name,l_name,email,phone,password,address) VALUES('".$_POST['username']."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['phone']."','".md5($_POST['password'])."','".$_POST['address']."')";
 	mysqli_query($db, $mql);
 		$success = "Account Created successfully! <p>You will be redirected in <span id='counter'>5</span> second(s).</p>
@@ -69,7 +69,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 		
 		
 		
-		 header("refresh:5;url=login.php"); // redireted once inserted success
+		 header("refresh:5;url=login.php"); 
     }
 	}
 
@@ -83,23 +83,23 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
     <title>Starter Template for Bootstrap</title>
-    <!-- Bootstrap core CSS -->
+   
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animsition.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+   
     <link href="css/style.css" rel="stylesheet"> </head>
 <body>
      
-         <!--header starts-->
+     
          <header id="header" class="header-scroll top-header headrom">
-            <!-- .navbar -->
+     
             <nav class="navbar navbar-dark">
                <div class="container">
                   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
@@ -129,7 +129,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                   </div>
                </div>
             </nav>
-            <!-- /.navbar -->
+      
          </header>
          <div class="page-wrapper">
             <div class="breadcrumb">
@@ -149,7 +149,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
             <section class="contact-page inner-page">
                <div class="container">
                   <div class="row">
-                     <!-- REGISTER -->
+                     
                      <div class="col-md-8">
                         <div class="widget">
                            <div class="widget-body">
@@ -199,31 +199,31 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                               </form>
                            
 						   </div>
-                           <!-- end: Widget -->
+                           
                         </div>
-                        <!-- /REGISTER -->
+                        
                      </div>
-                     <!-- WHY? -->
+                     
                      <div class="col-md-4">
                         <h4>Pendaftaran Mudah Dan Cepat</h4>
                         
                         <hr>
                         <img src="http://placehold.it/400x300" alt="" class="img-fluid">
 
-                        <!-- end:Panel -->
+                        
                         <h4 class="m-t-20">Dukungan Pelanggan</h4>
                         <p> Bila ada Pertanyaan Tanyakan Pada kami </p>
                         <p> <a href="contact.html" class="btn theme-btn m-t-15">Hubungin Kami</a> </p>
                      </div>
-                     <!-- /WHY? -->
+                    
                   </div>
                </div>
             </section>
             
-            <!-- start: FOOTER -->
+          
         <footer class="footer">
             <div class="container">
-                <!-- top footer statrs -->
+            
                 <div class="row top-footer">
                     <div class="col-xs-12 col-sm-3 footer-logo-block color-gray">
                         <a href="#"> <img src="images/food-picky-logo.png" alt="Footer logo"> </a> <span>Order Delivery &amp; Take-Out </span> </div>
@@ -267,8 +267,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                         </ul>
                     </div>
                 </div>
-                <!-- top footer ends -->
-                <!-- bottom footer statrs -->
+                
                 <div class="bottom-footer">
                     <div class="row">
                         <div class="col-xs-12 col-sm-3 payment-options color-gray">
@@ -297,15 +296,14 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                             <h5>Telepon: <a href="tel:+080000012222">(021) 8614077</a></h5> </div>
                     </div>
                 </div>
-                <!-- bottom footer ends -->
+                
             </div>
         </footer>
-        <!-- end:Footer -->
+        
          </div>
-         <!-- end:page wrapper -->
+       
       
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+  
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
