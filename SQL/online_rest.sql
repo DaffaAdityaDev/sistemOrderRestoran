@@ -25,7 +25,7 @@ USE `online_rest`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+--Table structure untuk tabel `admin`
 --
 
 CREATE TABLE IF NOT EXISTS `admin` (
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
--- Dumping data for table `admin`
+--memasukan data untuk table `admin`
 --
 
 INSERT INTO `admin` (`adm_id`, `username`, `password`, `email`, `code`, `date`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `admin` (`adm_id`, `username`, `password`, `email`, `code`, `date`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin_codes`
+--  Table structure for table `admin_codes`
 --
 
 CREATE TABLE IF NOT EXISTS `admin_codes` (
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `admin_codes` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `admin_codes`
+--memasukan data untuk table `admin_codes`
 --
 
 INSERT INTO `admin_codes` (`id`, `codes`) VALUES
@@ -73,7 +73,7 @@ INSERT INTO `admin_codes` (`id`, `codes`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dishes`
+--  Table structure for table `dishes`
 --
 
 CREATE TABLE IF NOT EXISTS `dishes` (
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `dishes` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
--- Dumping data for table `dishes`
+--  memasukan data for table `dishes`
 --
 
 INSERT INTO `dishes` (`d_id`, `rs_id`, `title`, `slogan`, `price`, `img`) VALUES
@@ -102,7 +102,7 @@ INSERT INTO `dishes` (`d_id`, `rs_id`, `title`, `slogan`, `price`, `img`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `remark`
+--  Table structure for table `remark`
 --
 
 CREATE TABLE IF NOT EXISTS `remark` (
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `remark` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=71 ;
 
 --
--- Dumping data for table `remark`
+--  memasukan data for table `remark`
 --
 
 INSERT INTO `remark` (`id`, `frm_id`, `status`, `remark`, `remarkDate`) VALUES
@@ -132,7 +132,7 @@ INSERT INTO `remark` (`id`, `frm_id`, `status`, `remark`, `remarkDate`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `restaurant`
+--  Table structure for table `restaurant`
 --
 
 CREATE TABLE IF NOT EXISTS `restaurant` (
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `restaurant` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=54 ;
 
 --
--- Dumping data for table `restaurant`
+--  memasukan data for table `restaurant`
 --
 
 INSERT INTO `restaurant` (`rs_id`, `c_id`, `title`, `email`, `phone`, `url`, `o_hr`, `c_hr`, `o_days`, `address`, `image`, `date`) VALUES
@@ -166,7 +166,7 @@ INSERT INTO `restaurant` (`rs_id`, `c_id`, `title`, `email`, `phone`, `url`, `o_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `res_category`
+--  Table structure for table `res_category`
 --
 
 CREATE TABLE IF NOT EXISTS `res_category` (
@@ -177,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `res_category` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
--- Dumping data for table `res_category`
+-- memasukan data for table `res_category`
 --
 
 INSERT INTO `res_category` (`c_id`, `c_name`, `date`) VALUES
@@ -190,7 +190,7 @@ INSERT INTO `res_category` (`c_id`, `c_name`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+--  Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -208,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
 --
--- Dumping data for table `users`
+-- memasukan data for table `users`
 --
 
 INSERT INTO `users` (`u_id`, `username`, `f_name`, `l_name`, `email`, `phone`, `password`, `address`, `status`, `date`) VALUES
@@ -218,7 +218,7 @@ INSERT INTO `users` (`u_id`, `username`, `f_name`, `l_name`, `email`, `phone`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users_orders`
+--  Table structure for table`users_orders`
 --
 
 CREATE TABLE IF NOT EXISTS `users_orders` (
@@ -233,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `users_orders` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
 --
--- Dumping data for table `users_orders`
+--  memasukan data for table `users_orders`
 --
 
 
