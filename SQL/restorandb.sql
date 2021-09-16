@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 --
 -- Database: `online_rest`
 --
-CREATE DATABASE IF NOT EXISTS `online_rest` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `online_rest`;
+CREATE DATABASE IF NOT EXISTS `restorandb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `restorandb`;
 
 -- --------------------------------------------------------
 
 --
---Table structure untuk tabel `admin`
+-- Table structure untuk tabel `admin`
 --
 
 CREATE TABLE IF NOT EXISTS `admin` (
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
---memasukan data untuk table `admin`
+-- memasukan data untuk table `admin`
 --
 
 INSERT INTO `admin` (`adm_id`, `username`, `password`, `email`, `code`, `date`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `admin` (`adm_id`, `username`, `password`, `email`, `code`, `date`) 
 -- --------------------------------------------------------
 
 --
---  Table structure for table `admin_codes`
+-- Table structure untuk table `admin_codes`
 --
 
 CREATE TABLE IF NOT EXISTS `admin_codes` (
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `admin_codes` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
---memasukan data untuk table `admin_codes`
+-- memasukan data untuk table `admin_codes`
 --
 
 INSERT INTO `admin_codes` (`id`, `codes`) VALUES
@@ -73,10 +73,10 @@ INSERT INTO `admin_codes` (`id`, `codes`) VALUES
 -- --------------------------------------------------------
 
 --
---  Table structure for table `dishes`
+-- Table structure untuk table `makanan`
 --
 
-CREATE TABLE IF NOT EXISTS `dishes` (
+CREATE TABLE IF NOT EXISTS `makanan` (
   `d_id` int(222) NOT NULL AUTO_INCREMENT,
   `rs_id` int(222) NOT NULL,
   `title` varchar(222) NOT NULL,
@@ -87,52 +87,52 @@ CREATE TABLE IF NOT EXISTS `dishes` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
---  memasukan data for table `dishes`
+-- memasukan data for table `makanan`
 --
 
-INSERT INTO `dishes` (`d_id`, `rs_id`, `title`, `slogan`, `price`, `img`) VALUES
-(11, 48, 'Bonefish', 'enak ', '55.77', '5ad7582e2ec9c.jpg'),
-(12, 48, 'Hard Rock Cafe', 'enak', '22.12', '5ad7590d9702b.jpg'),
-(13, 49, 'Uno Pizzeria & Grill', 'enak', '12.35', '5ad7597aa0479.jpg'),
-(14, 50, 'Red Robins Chick on a Stick', 'enak', '34.99', '5ad759e1546fc.jpg'),
-(15, 51, 'Lyfe Kitchens Tofu Taco', 'enak', '11.99', '5ad75a1869e93.jpg'),
-(16, 52, 'Houlihans Mini Cheeseburger', 'enak', '22.55', '5ad75a5dbb329.jpg'),
-(17, 53, 'jklmno', 'enak', '17.99', '5ad79fcf59e66.jpg');
+INSERT INTO `makanan` (`d_id`, `rs_id`, `title`, `slogan`, `price`, `img`) VALUES
+(11, 48, 'Bonefish', 'Three ounces of lightly seasoned fresh tilapia ', '55.77', '5ad7582e2ec9c.jpg'),
+(12, 48, 'Hard Rock Cafe', 'A mix of chopped lettuces, shredded cheese, chicken cubes', '22.12', '5ad7590d9702b.jpg'),
+(13, 49, 'Uno Pizzeria & Grill', 'Kids can choose their pasta shape, type of sauce, favorite veggies (like broccoli or mushrooms)', '12.35', '5ad7597aa0479.jpg'),
+(14, 50, 'Red Robins Chick on a Stick', 'Plain grilled chicken breast? Blah.', '34.99', '5ad759e1546fc.jpg'),
+(15, 51, 'Lyfe Kitchens Tofu Taco', 'This chain, known for a wide selection of vegetarian and vegan choices', '11.99', '5ad75a1869e93.jpg'),
+(16, 52, 'Houlihans Mini Cheeseburger', 'Creekstone Farms, where no antibiotics or growth hormones are used', '22.55', '5ad75a5dbb329.jpg'),
+(17, 53, 'jklmno', 'great taste great whatever', '17.99', '5ad79fcf59e66.jpg');
 
 -- --------------------------------------------------------
 
 --
---  Table structure for table `remark`
+-- Table structure untuk table `pengiriman`
 --
 
-CREATE TABLE IF NOT EXISTS `remark` (
+CREATE TABLE IF NOT EXISTS `pengiriman` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `frm_id` int(11) NOT NULL,
   `status` varchar(255) NOT NULL,
-  `remark` mediumtext NOT NULL,
-  `remarkDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pengiriman` mediumtext NOT NULL,
+  `pengirimanDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=71 ;
 
 --
---  memasukan data for table `remark`
+-- memasukan data untuk table `pengiriman`
 --
 
-INSERT INTO `remark` (`id`, `frm_id`, `status`, `remark`, `remarkDate`) VALUES
-(62, 32, 'in process', 'ok', '2018-04-18 17:35:52'),
-(63, 32, 'closed', 'ok', '2018-04-18 17:36:46'),
-(64, 32, 'in process', 'ok', '2018-04-18 18:01:37'),
-(65, 32, 'closed', 'ok', '2018-04-18 18:08:55'),
-(66, 34, 'in process', 'ok', '2018-04-18 18:56:32'),
+INSERT INTO `pengiriman` (`id`, `frm_id`, `status`, `pengiriman`, `pengirimanDate`) VALUES
+(62, 32, 'in process', 'hi', '2018-04-18 17:35:52'),
+(63, 32, 'closed', 'cc', '2018-04-18 17:36:46'),
+(64, 32, 'in process', 'fff', '2018-04-18 18:01:37'),
+(65, 32, 'closed', 'its delv', '2018-04-18 18:08:55'),
+(66, 34, 'in process', 'on a way', '2018-04-18 18:56:32'),
 (67, 35, 'closed', 'ok', '2018-04-18 18:59:08'),
-(68, 37, 'in process', 'ok!', '2018-04-18 19:50:06'),
-(69, 37, 'rejected', 'ok', '2018-04-18 19:51:19'),
-(70, 37, 'closed', 'ok', '2018-04-18 19:51:50');
+(68, 37, 'in process', 'on the way!', '2018-04-18 19:50:06'),
+(69, 37, 'rejected', 'if admin cancel for any reason this box is for remark only for buter perposes', '2018-04-18 19:51:19'),
+(70, 37, 'closed', 'delivered success', '2018-04-18 19:51:50');
 
 -- --------------------------------------------------------
 
 --
---  Table structure for table `restaurant`
+-- Table structure untuk table `restaurant`
 --
 
 CREATE TABLE IF NOT EXISTS `restaurant` (
@@ -152,21 +152,21 @@ CREATE TABLE IF NOT EXISTS `restaurant` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=54 ;
 
 --
---  memasukan data for table `restaurant`
+-- memasukan data untuk table `restaurant`
 --
 
 INSERT INTO `restaurant` (`rs_id`, `c_id`, `title`, `email`, `phone`, `url`, `o_hr`, `c_hr`, `o_days`, `address`, `image`, `date`) VALUES
-(48, 5, 'Hari Burger', 'HariBurger@gmail.com', ' 090412 64676', 'HariBurger.com', '7am', '4pm', 'mon-tue', ' jakarta, bkt', '5ad74ce37c383.jpg', '2018-04-18 13:49:23'),
-(49, 5, 'The Great Kabab Factory', 'kwbab@gmail.com', '011 2677 9070', 'kwbab.com', '6am', '5pm', 'mon-fri', 'jakarta, bkt', '5ad74de005016.jpg', '2018-04-18 13:53:36'),
-(50, 6, 'Aarkay Vaishno Dhaba', 'Vaishno@gmail.com', '090410 35147', 'Vaishno.com', '6am', '6pm', 'mon-sat', 'bekasi, pondok', '5ad74e5310ae4.jpg', '2018-04-18 13:55:31'),
-(51, 7, 'Martini', 'martin@gmail.com', '3454345654', 'martin.com', '8am', '4pm', 'mon-thu', 'bekasi, pondok', '5ad74ebf1d103.jpg', '2018-04-18 13:57:19'),
-(52, 8, 'hudson', 'hud@gmail.com', '2345434567', 'hudson.com', '6am', '7pm', 'mon-fri', 'bekasi, pondok', '5ad756f1429e3.jpg', '2018-04-18 14:32:17'),
-(53, 9, 'kriyana store', 'kari@gmail.com', '4512545784', 'kari.com', '7am', '7pm', 'mon-sat', 'bekasi, pondok', '5ad79e7d01c5a.jpg', '2018-04-18 19:37:33');
+(48, 5, 'Hari Burger', 'HariBurger@gmail.com', ' 090412 64676', 'HariBurger.com', '7am', '4pm', 'mon-tue', ' Palace,   natwar jalandhar', '5ad74ce37c383.jpg', '2018-04-18 13:49:23'),
+(49, 5, 'The Great Kabab Factory', 'kwbab@gmail.com', '011 2677 9070', 'kwbab.com', '6am', '5pm', 'mon-fri', 'Radisson Blu Plaza Hotel, Delhi Airport, NH-8, New Delhi, 110037', '5ad74de005016.jpg', '2018-04-18 13:53:36'),
+(50, 6, 'Aarkay Vaishno Dhaba', 'Vaishno@gmail.com', '090410 35147', 'Vaishno.com', '6am', '6pm', 'mon-sat', 'Bhargav Nagar, Jalandhar - Nakodar Rd, Jalandhar, Punjab 144003', '5ad74e5310ae4.jpg', '2018-04-18 13:55:31'),
+(51, 7, 'Martini', 'martin@gmail.com', '3454345654', 'martin.com', '8am', '4pm', 'mon-thu', '399 L Near Apple Showroom, Model Town,', '5ad74ebf1d103.jpg', '2018-04-18 13:57:19'),
+(52, 8, 'hudson', 'hud@gmail.com', '2345434567', 'hudson.com', '6am', '7pm', 'mon-fri', 'Opposite Lovely Sweets, Nakodar Road, Jalandhar, Punjab 144001', '5ad756f1429e3.jpg', '2018-04-18 14:32:17'),
+(53, 9, 'kriyana store', 'kari@gmail.com', '4512545784', 'kari.com', '7am', '7pm', 'mon-sat', 'near kalu gali hotel india what everrrr.', '5ad79e7d01c5a.jpg', '2018-04-18 19:37:33');
 
 -- --------------------------------------------------------
 
 --
---  Table structure for table `res_category`
+-- Table structure untuk table `res_category`
 --
 
 CREATE TABLE IF NOT EXISTS `res_category` (
@@ -177,20 +177,20 @@ CREATE TABLE IF NOT EXISTS `res_category` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
--- memasukan data for table `res_category`
+-- memasukan data untuk table `res_category`
 --
 
 INSERT INTO `res_category` (`c_id`, `c_name`, `date`) VALUES
-(5, 'grill', '2021-04-14 18:45:28'),
-(6, 'pizza', '2021-04-14 18:44:56'),
-(7, 'pasta', '2021-04-14 18:45:13'),
-(8, 'thaifood', '2021-04-14 18:32:56'),
-(9, 'fish', '2021-04-14 18:44:33');
+(5, 'grill', '2018-04-14 18:45:28'),
+(6, 'pizza', '2018-04-14 18:44:56'),
+(7, 'pasta', '2018-04-14 18:45:13'),
+(8, 'thaifood', '2018-04-14 18:32:56'),
+(9, 'fish', '2018-04-14 18:44:33');
 
 -- --------------------------------------------------------
 
 --
---  Table structure for table `users`
+-- Table structure untuk table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -208,17 +208,17 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
 --
--- memasukan data for table `users`
+-- memasukan data untuk table `users`
 --
 
 INSERT INTO `users` (`u_id`, `username`, `f_name`, `l_name`, `email`, `phone`, `password`, `address`, `status`, `date`) VALUES
-(31, 'navjot789', 'navjot', 'singh', 'ns949405@gmail.com', '9041240385', '6d0361d5777656072438f6e314a852bc', 'jakarta', 1, '2018-04-18 10:05:03'),
-(32, 'navjot890', 'nav', 'singh', 'nds949405@gmail.com', '6232125458', '6d0361d5777656072438f6e314a852bc', 'jakarta', 1, '2018-04-18 09:50:56');
+(31, 'navjot789', 'navjot', 'singh', 'ns949405@gmail.com', '9041240385', '6d0361d5777656072438f6e314a852bc', 'badri col phase 2', 1, '2018-04-18 10:05:03'),
+(32, 'navjot890', 'nav', 'singh', 'nds949405@gmail.com', '6232125458', '6d0361d5777656072438f6e314a852bc', 'badri col phase 1', 1, '2018-04-18 09:50:56');
 
 -- --------------------------------------------------------
 
 --
---  Table structure for table`users_orders`
+-- Table structure untuk table `users_orders`
 --
 
 CREATE TABLE IF NOT EXISTS `users_orders` (
@@ -233,9 +233,12 @@ CREATE TABLE IF NOT EXISTS `users_orders` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
 --
---  memasukan data for table `users_orders`
+-- memasukan data for table `users_orders`
 --
 
+INSERT INTO `users_orders` (`o_id`, `u_id`, `title`, `quantity`, `price`, `status`, `date`) VALUES
+(37, 31, 'jklmno', 5, '17.99', 'closed', '2018-04-18 19:51:50'),
+(38, 31, 'Red Robins Chick on a Stick', 2, '34.99', NULL, '2018-04-18 19:52:34');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
